@@ -38,6 +38,8 @@ func main() {
 	commands.Register("login", handlerLogin)
 	commands.Register("register", handlerRegister)
 	commands.Register("reset", handleDeleteUsers)
+	commands.Register("users", handleGetUsers)
+	commands.Register("agg", handlerAgg)
 	if len(os.Args) < 2 {
 		log.Fatal("Usage: cli <command> [args...]")
 	}
